@@ -1,0 +1,13 @@
+{
+  "name": "pawtrail-functional-store",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "PawTrail Australian dog essentials storefront with secure server-side Stripe Checkout integration points",
+  "engines": {"node": ">=22.13.0"},
+  "scripts": {
+    "start": "node --env-file=.env server.mjs",
+    "start:basic": "node server.mjs",
+    "test": "node tests/integration.mjs"
+  }
+}
