@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: pawtrail-design-preview
+    runtime: static
+    plan: free
+    buildCommand: mkdir -p render-preview-site && cp PawTrail_Approved_Interactive_Preview.html render-preview-site/index.html
+    staticPublishPath: ./render-preview-site
+    autoDeployTrigger: off
