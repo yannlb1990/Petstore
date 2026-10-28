@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pawtrail-supplier-review-2026.onrender.com/sitemap.xml
