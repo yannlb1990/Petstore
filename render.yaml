@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: pawtrail-preview
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    autoDeployTrigger: off
+    healthCheckPath: /api/store
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_PATH
+        value: /app/data/pawtrail.sqlite
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: BASE_URL
+        sync: false
+      - key: ALLOW_LIVE_CHECKOUT
+        value: 'no'
+      - key: ENABLE_STRIPE_TEST_CHECKOUT
+        value: 'no'
+    disk:
+      name: pawtrail-data
+      mountPath: /app/data
+      sizeGB: 1
